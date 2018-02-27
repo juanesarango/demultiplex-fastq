@@ -88,7 +88,7 @@ def demultiplex(pool, barcodes):
                 join(
                     OUTPUT_DIR,
                     folder,
-                    f'171205-HBM-0006-poolB_IGO_08099_{pool}_{number}_S{number}_R1_001_{cell}.fastq'
+                    f'Sample_pool{pool}_S{number}_R1_{cell}.fastq'
                 ),
                 'fastq'
             )
@@ -97,7 +97,7 @@ def demultiplex(pool, barcodes):
                 join(
                     OUTPUT_DIR,
                     folder,
-                    f'171205-HBM-0006-poolB_IGO_08099_{pool}_{number}_S{number}_R2_001_{cell}.fastq'
+                    f'Sample_pool{pool}_S{number}_R2_{cell}.fastq'
                 ),
                 'fastq'
             )
