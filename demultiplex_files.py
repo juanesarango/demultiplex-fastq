@@ -10,7 +10,7 @@ from barcodes import BARCODES_A, BARCODES_B, BARCODES_C, BARCODES_D
 
 
 ROOT_DIR_DATA = '/ifs/archive/BIC/share/leukgen/papaemme/LIZ_0827_AH5MH5BCX2/Project_08099_C/'
-OUTPUT_DIR = '/home/arangooj/fastq-trim'
+OUTPUT_DIR = '/ifs/work/leukgen/home/arangooj/single_cell_data'
 POOL_NUMBER = {
     'A': 1,
     'B': 2,
@@ -51,6 +51,23 @@ def find_most_similar_paired(record1, record2, barcodes):
     raise Exception("R1 read sequence daoesn't match the R2 read sequence.")
 
 
+# Manage file handles to keep files open during demultiplexing
+def get_files_handles(outdir, pool, barcodes):
+    return {
+        cell: {
+            'r1': open(join(outdir, f'Sample_pool{pool}_R1_{cell}.fastq'), 'a'),
+            'r2': open(join(outdir, f'Sample_pool{pool}_R2_{cell}.fastq'), 'a')
+        }
+        for cell in barcodes.keys()
+    }
+
+
+def close_file_handles(file_handles):
+    for file_cell_handles in file_handles.values():
+        file_cell_handles['r1'].close()
+        file_cell_handles['r2'].close()
+
+
 # Main Function
 def demultiplex(pool, barcodes):
 
@@ -73,19 +90,18 @@ def demultiplex(pool, barcodes):
         if file_name.endswith('fastq.gz') and 'R2' in file_name
     ][0]
 
+    # Get handles for output files
+    outdir = join(OUTPUT_DIR, folder)
+    output_handles = get_files_handles(outdir, pool, barcodes)
+
     # Open record one by one of each file, classify it and output to file.
     with gzip.open(fastq_r1_path, 'rt') as fr1, gzip.open(fastq_r2_path, 'rt') as fr2:
 
         records_r1_gen = SeqIO.parse(fr1, 'fastq')
         records_r2_gen = SeqIO.parse(fr2, 'fastq')
 
-        n = 0
-
         for record_r1 in records_r1_gen:
             record_r2 = next(records_r2_gen)
-
-            n += 1
-            if n> 50: break
 
             # Classify records according to barcode
             cell, _ = find_most_similar_paired(record_r1, record_r2, barcodes)
@@ -95,21 +111,25 @@ def demultiplex(pool, barcodes):
                 OUTPUT_DIR, folder, f'Sample_pool{pool}_R1_{cell}.fastq'
                 )
             output_r2 = join(
-                OUTPUT_DIR, folder, f'Sample_pool{pool}_R2_{cell}.fastq'
+                OUTPUT_DIR, folder, f'Sample_pool{pool}_R1_{cell}.fastq'
                 )
 
-            SeqIO.write(record_r1, output_r1, 'fastq')
-            SeqIO.write(record_r2, output_r2, 'fastq')
+            SeqIO.write(record_r1, output_handles[cell]['r1'], 'fastq')
+            SeqIO.write(record_r2, output_handles[cell]['r2'], 'fastq')
 
             # Store some stats
             records_by_cell[cell] += 1
 
+    # Close Handles
+    close_file_handles(output_handles)
+
+    # Print Stats
     print(f'Finish Demultiplexing of Pool {pool} Sample {number}')
     print(records_by_cell)
 
 
 if __name__=="__main__":
-    demultiplex('A', BARCODES_A)
-    demultiplex('B', BARCODES_B)
+    # demultiplex('A', BARCODES_A)
+    # demultiplex('B', BARCODES_B)
     demultiplex('C', BARCODES_C)
     demultiplex('D', BARCODES_D)
