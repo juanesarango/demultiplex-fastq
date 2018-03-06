@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "all_pools.py", line 113, in <module>
+    demultiplex('A', BARCODES_A)
+  File "all_pools.py", line 84, in demultiplex
+    cell, _ = find_most_similar_paired(record_r1, record_r2, barcodes)
+  File "all_pools.py", line 45, in find_most_similar_paired
+    ]
+  File "all_pools.py", line 45, in <listcomp>
+    ]
+  File "all_pools.py", line 27, in similarity_score
+    ])
+  File "all_pools.py", line 27, in <listcomp>
+    ])
+KeyboardInterrupt
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s24>
+Subject: Job 17542648: <python all_pools.py> in cluster <solar> Exited
+
+Job <python all_pools.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s24>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 12:12:57 2018
+Results reported on Wed Feb 28 11:24:18 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python all_pools.py
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   6201.54 sec.
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   83481 sec.
+    Turnaround time :                            83481 sec.
+
+The output (if any) is above this job summary.
+

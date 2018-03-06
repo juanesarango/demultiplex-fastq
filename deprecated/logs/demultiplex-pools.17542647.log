@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "all_pools.py", line 117, in <module>
+    demultiplex('A', BARCODES_A)
+  File "all_pools.py", line 97, in demultiplex
+    'fastq'
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 486, in write
+    with as_handle(handle, mode) as fp:
+  File "/ifs/work/leukgen/bin/python/3.6.4/lib/python3.6/contextlib.py", line 81, in __enter__
+    return next(self.gen)
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/File.py", line 88, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/arangooj/fastq-trim/Sample_171205-HBM-0006-poolA_IGO_08099_C_1_test/171205-HBM-0006-poolB_IGO_08099_A_1_S1_R1_001_A9.fastq'
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s24>
+Subject: Job 17542647: <python all_pools.py> in cluster <solar> Exited
+
+Job <python all_pools.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s24>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 12:11:21 2018
+Results reported on Tue Feb 27 12:11:23 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python all_pools.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.28 sec.
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               -
+    Run time :                                   2 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) is above this job summary.
+

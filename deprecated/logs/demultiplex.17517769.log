@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "poolA_C1.py", line 81, in <module>
+    records_1 = list(SeqIO.parse(file, 'fastq'))
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 609, in parse
+    for r in i:
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 1030, in FastqPhredIterator
+    for title_line, seq_string, quality_string in FastqGeneralIterator(handle):
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 930, in FastqGeneralIterator
+    quality_string = handle_readline().rstrip()
+  File "/ifs/work/leukgen/bin/python/3.6.4/lib/python3.6/gzip.py", line 298, in closed
+    @property
+KeyboardInterrupt
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@u09>
+Subject: Job 17517769: <python poolA_C1.py> in cluster <solar> Exited
+
+Job <python poolA_C1.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <4*u09>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Mon Feb 26 18:48:24 2018
+Results reported on Mon Feb 26 18:50:40 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolA_C1.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   135.16 sec.
+    Max Memory :                                 11 GB
+    Average Memory :                             4.91 GB
+    Total Requested Memory :                     8.00 GB
+    Delta Memory :                               -3.00 GB
+    Max Swap :                                   11 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   136 sec.
+    Turnaround time :                            136 sec.
+
+The output (if any) is above this job summary.
+

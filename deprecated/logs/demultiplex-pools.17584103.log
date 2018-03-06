@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "all_pools.py", line 114, in <module>
+    demultiplex('A', BARCODES_A)
+  File "all_pools.py", line 59, in demultiplex
+    for file_name in listdir(file_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/ifs/archive/BIC/share/leukgen/papaemme/LIZ_0827_AH5MH5BCX2/Project_08099_C/PoolA'
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s08>
+Subject: Job 17584103: <python all_pools.py> in cluster <solar> Exited
+
+Job <python all_pools.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s08>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Wed Feb 28 11:29:34 2018
+Results reported on Wed Feb 28 11:29:41 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python all_pools.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.47 sec.
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               -
+    Max Processes :                              2
+    Max Threads :                                3
+    Run time :                                   7 sec.
+    Turnaround time :                            24 sec.
+
+The output (if any) is above this job summary.
+

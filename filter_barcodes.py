@@ -2,7 +2,6 @@
 #!/usr/bin/env python
 
 from os.path import join
-
 from Bio import SeqIO
 
 from barcodes import BARCODES_A, BARCODES_B, BARCODES_C, BARCODES_D
@@ -28,38 +27,6 @@ def filter_files(pool, barcodes, stats={}):
 
     number = POOL_NUMBER[pool]
     folder = f'Sample_171205-HBM-0006-pool{pool}_IGO_08099_C_{number}'
-    records_by_cell = {key: 0 for key in barcodes.keys()}
-
-    for cell, barcode in barcodes.items():
-
-        stats = {index: 0 for index in range(7)}
-
-        print(f'Analyzing Cell {cell} - Pool {pool}')
-
-        input = join(
-            INPUT_DIR, folder, f'Sample_pool{pool}_R1_{cell}.fastq'
-        )
-
-        with open(input, 'rt') as fr1:
-            records_gen = SeqIO.parse(fr1, 'fastq')
-
-            for record in records_gen:
-                score1 = hamming_distance(barcode, record.seq[:6])
-                stats[score1] += 1
-
-        # Print Stats
-        print(f'Finish Stats of Cell {cell} - Pool {pool}')
-        print(stats)
-        stats_pool[cell] = stats
-
-    return stats_pool
-
-# Main Function
-def filter_files(pool, barcodes, stats={}):
-
-    number = POOL_NUMBER[pool]
-    folder = f'Sample_171205-HBM-0006-pool{pool}_IGO_08099_C_{number}'
-    records_by_cell = {key: 0 for key in barcodes.keys()}
 
     for cell, barcode in barcodes.items():
 

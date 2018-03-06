@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "poolB_C2.py", line 81, in <module>
+    records_1 = list(SeqIO.parse(file, 'fastq'))
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 609, in parse
+    for r in i:
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 1040, in FastqPhredIterator
+    if qualities and (min(qualities) < 0 or max(qualities) > 93):
+KeyboardInterrupt
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s05>
+Subject: Job 17517760: <python poolB_C2.py> in cluster <solar> Exited
+
+Job <python poolB_C2.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <4*s05>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Mon Feb 26 18:47:54 2018
+Results reported on Mon Feb 26 18:50:42 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolB_C2.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   163.13 sec.
+    Max Memory :                                 10 GB
+    Average Memory :                             4.30 GB
+    Total Requested Memory :                     8.00 GB
+    Delta Memory :                               -2.00 GB
+    Max Swap :                                   10 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   168 sec.
+    Turnaround time :                            168 sec.
+
+The output (if any) is above this job summary.
+

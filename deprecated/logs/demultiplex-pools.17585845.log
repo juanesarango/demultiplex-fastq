@@ -1,0 +1,51 @@
+Finish Demultiplexing of Pool A Sample 1
+{'A1': 979515, 'A2': 1458954, 'A3': 2356877, 'A4': 1192324, 'A5': 864906, 'A6': 1862990, 'A7': 833566, 'A8': 1336569, 'A9': 5188707, 'A10': 869596, 'A11': 1885650, 'A12': 2640814, 'B1': 1461334, 'B2': 1430574, 'B3': 1461151, 'B4': 1387233, 'B5': 787276, 'B6': 2516497, 'B7': 3051455, 'B8': 2534009, 'B9': 2196957, 'B10': 1672517, 'B11': 2238618, 'B12': 2239936}
+Finish Demultiplexing of Pool B Sample 2
+{'C1': 1512722, 'C2': 1097656, 'C3': 1199330, 'C4': 1345924, 'C5': 721761, 'C6': 1427646, 'C7': 855286, 'C8': 1639615, 'C9': 2516984, 'C10': 803838, 'C11': 1201528, 'C12': 1826806, 'D1': 827358, 'D2': 862868, 'D3': 759212, 'D4': 1961655, 'D5': 453363, 'D6': 1516236, 'D7': 2341031, 'D8': 1589464, 'D9': 1831497, 'D10': 1376601, 'D11': 2287288, 'D12': 4153978}
+Traceback (most recent call last):
+  File "pools.py", line 129, in <module>
+    
+  File "pools.py", line 115, in demultiplex
+    )
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 490, in write
+    count = writer_class(fp).write_file(sequences)
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/Interfaces.py", line 208, in write_file
+    count = self.write_records(records)
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/Interfaces.py", line 193, in write_records
+    self.write_record(record)
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 1448, in write_record
+    self.handle.write("@%s\n%s\n+\n%s\n" % (title, seq_str, qualities_str))
+OSError: [Errno 28] No space left on device
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s10>
+Subject: Job 17585845: <python pools.py> in cluster <solar> Exited
+
+Job <python pools.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s10>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Wed Feb 28 12:28:30 2018
+Results reported on Thu Mar  1 06:19:06 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python pools.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   64200.26 sec.
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   64236 sec.
+    Turnaround time :                            64258 sec.
+
+The output (if any) is above this job summary.
+

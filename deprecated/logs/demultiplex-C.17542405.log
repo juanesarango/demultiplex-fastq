@@ -1,0 +1,38 @@
+Terminated
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@u35>
+Subject: Job 17542405: <python poolC_C3.py> in cluster <solar> Exited
+
+Job <python poolC_C3.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*u35>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:21:49 2018
+Results reported on Tue Feb 27 10:33:29 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolC_C3.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   692.12 sec.
+    Max Memory :                                 68 GB
+    Average Memory :                             33.77 GB
+    Total Requested Memory :                     64.00 GB
+    Delta Memory :                               -4.00 GB
+    Max Swap :                                   68 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   700 sec.
+    Turnaround time :                            701 sec.
+
+The output (if any) is above this job summary.
+

@@ -1,0 +1,38 @@
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s20>
+Subject: Job 17542472: <python poolA_C1.py> in cluster <solar> Exited
+
+Job <python poolA_C1.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s20>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:47:10 2018
+Results reported on Tue Feb 27 11:47:23 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolA_C1.py
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   3561.92 sec.
+    Max Memory :                                 136 GB
+    Average Memory :                             94.53 GB
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               120.00 GB
+    Max Swap :                                   136 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   3613 sec.
+    Turnaround time :                            3614 sec.
+
+The output (if any) is above this job summary.
+

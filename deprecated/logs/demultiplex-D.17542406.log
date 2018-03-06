@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "poolD_C4.py", line 84, in <module>
+    records_2 = list(SeqIO.parse(file, 'fastq'))
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 609, in parse
+    for r in i:
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 1030, in FastqPhredIterator
+    for title_line, seq_string, quality_string in FastqGeneralIterator(handle):
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 934, in FastqGeneralIterator
+    if not line:
+KeyboardInterrupt
+Terminated
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@u09>
+Subject: Job 17542406: <python poolD_C4.py> in cluster <solar> Exited
+
+Job <python poolD_C4.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*u09>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:21:55 2018
+Results reported on Tue Feb 27 10:33:09 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolD_C4.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   665.46 sec.
+    Max Memory :                                 67 GB
+    Average Memory :                             33.16 GB
+    Total Requested Memory :                     64.00 GB
+    Delta Memory :                               -3.00 GB
+    Max Swap :                                   67 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   674 sec.
+    Turnaround time :                            674 sec.
+
+The output (if any) is above this job summary.
+

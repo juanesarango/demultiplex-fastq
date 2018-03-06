@@ -1,0 +1,38 @@
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s09>
+Subject: Job 17542475: <python poolD_C4.py> in cluster <solar> Exited
+
+Job <python poolD_C4.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s09>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:47:39 2018
+Results reported on Tue Feb 27 11:47:49 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolD_C4.py
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   3592.66 sec.
+    Max Memory :                                 124 GB
+    Average Memory :                             92.05 GB
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               132.00 GB
+    Max Swap :                                   124 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   3610 sec.
+    Turnaround time :                            3610 sec.
+
+The output (if any) is above this job summary.
+

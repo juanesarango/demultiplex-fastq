@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqRecord.py", line 219, in __init__
+    _RestrictedDict(length=len(seq))
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqRecord.py", line 74, in __init__
+    dict.__init__(self)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "poolA_C1.py", line 84, in <module>
+    records_2 = list(SeqIO.parse(file, 'fastq'))
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/__init__.py", line 609, in parse
+    for r in i:
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqIO/QualityIO.py", line 1038, in FastqPhredIterator
+    id=id, name=name, description=descr)
+  File "/ifs/work/leukgen/bin/python/.virtualenvs/isabel3.6/lib/python3.6/site-packages/Bio/SeqRecord.py", line 221, in __init__
+    raise TypeError("seq argument should be a Seq object or similar")
+TypeError: seq argument should be a Seq object or similar
+Terminated
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@u25>
+Subject: Job 17542403: <python poolA_C1.py> in cluster <solar> Exited
+
+Job <python poolA_C1.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*u25>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:21:33 2018
+Results reported on Tue Feb 27 10:33:10 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolA_C1.py
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   691.64 sec.
+    Max Memory :                                 68 GB
+    Average Memory :                             33.46 GB
+    Total Requested Memory :                     64.00 GB
+    Delta Memory :                               -4.00 GB
+    Max Swap :                                   68 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   697 sec.
+    Turnaround time :                            698 sec.
+
+The output (if any) is above this job summary.
+

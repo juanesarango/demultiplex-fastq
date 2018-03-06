@@ -1,0 +1,38 @@
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@s24>
+Subject: Job 17542474: <python poolC_C3.py> in cluster <solar> Exited
+
+Job <python poolC_C3.py> was submitted from host <selene> by user <arangooj> in cluster <solar>.
+Job was executed on host(s) <8*s24>, in queue <sol>, as user <arangooj> in cluster <solar>.
+</home/arangooj> was used as the home directory.
+</ifs/work/leukgen/home/arangooj/repos/demultiplex_fastq> was used as the working directory.
+Started at Tue Feb 27 10:47:32 2018
+Results reported on Tue Feb 27 11:47:49 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python poolC_C3.py
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   3532.05 sec.
+    Max Memory :                                 236 GB
+    Average Memory :                             120.04 GB
+    Total Requested Memory :                     256.00 GB
+    Delta Memory :                               20.00 GB
+    Max Swap :                                   236 GB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   3617 sec.
+    Turnaround time :                            3618 sec.
+
+The output (if any) is above this job summary.
+
